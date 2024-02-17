@@ -390,7 +390,7 @@ h6 {
 }
 
 
-/* courser section css start here  */
+/*live courser section css start here  */
 .course-section {
     overflow: hidden;
     padding: 200px 50px 200px 50px;
@@ -478,7 +478,8 @@ h6 {
     position: relative;
     z-index: 999;
 }
-.course-detail{
+
+.course-detail {
     position: relative;
     z-index: 999;
 }
@@ -503,11 +504,6 @@ h6 {
     line-height: 1em;
 
 }
-
-.course-details1-img {
-    width: 50%;
-}
-
 
 /*course-accordion*/
 
@@ -599,7 +595,6 @@ h6 {
     border: none;
 }
 
-
 .course-accordion-center .course-accordion-center--footer .buttons-container .button:hover {
     cursor: pointer;
 }
@@ -607,17 +602,85 @@ h6 {
 button.course-accordion-label.active {
     color: #d08e32;
 }
+
+
+/* image accordion start  */
+
+.course-details-img {
+    width: 50%;
+    margin: 20px 20px;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.course-details-img .item1,
+.course-details-img .item2,
+.course-details-img .item3 {
+    width: 100%;
+    height: 250px;
+    margin: 2px 0px;
+    box-sizing: border-box;
+    transition: .5s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.course-details-img .item1:hover,
+.custom-accordion .item2:hover,
+.custom-accordion .item3:hover {
+    height: 550px;
+}
+
+/* gallery image  */
+.gallery-img-items {
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    transition: transform ease-in-out 300ms;
+  }
+  
+  .gallery-img-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease;
+  }
+
+.gallery-img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}  
+
+.gallery-img-items:nth-child(2) {
+    grid-row: span 2 / span 2;
+}
+.gallery-img-items img:hover  {
+    transform: scale(1.08);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+
+
+
 /* courser section css end here  */
 
 
 
 /* course buy section  css start here */
 
-.courser-buy-section{
+.courser-buy-section {
     width: 869px;
     margin: 0 auto;
 }
-.courser-buy-column{
+
+.courser-buy-column {
     position: relative;
     background-color: transparent;
     background-image: linear-gradient(130deg, #DFB7B8 0%, #BE8885 100%);
@@ -626,36 +689,44 @@ button.course-accordion-label.active {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     padding: 20px 10px 10px 10px;
 }
-.courser-buy-column-img{
+
+.courser-buy-column-img {
     position: absolute;
     text-align: center;
     top: 1%;
     z-index: 0;
     left: -6%;
 }
-.courser-buy-column-img img{
+
+.courser-buy-column-img img {
     height: 240px;
     opacity: 0.05;
 }
-.courser-buy-column-content{
+
+.courser-buy-column-content {
     padding: 10px;
 }
-.courser-buy-column-content h3{
-    color:black;
+
+.courser-buy-column-content h3 {
+    color: black;
     font-size: 1.4rem;
     font-weight: 500;
     text-align: left;
 }
-.courser-buy-column-content i, .courser-buy-column-content span{
-    color:black;
-    font-size:1.1rem;
+
+.courser-buy-column-content i,
+.courser-buy-column-content span {
+    color: black;
+    font-size: 1.1rem;
     text-align: left;
     padding: 0px 0px 10px 0px;
 }
-.courser-buy-column-sold-out-button{
+
+.courser-buy-column-sold-out-button {
     display: flex;
 }
-.button-sold-out{
+
+.button-sold-out {
     color: #181818CC;
     background-color: #FFFFFF00;
     border-style: solid;
@@ -668,7 +739,8 @@ button.course-accordion-label.active {
     z-index: 5;
     border-radius: 2px;
 }
-.courser-buy-column-flag img{
+
+.courser-buy-column-flag img {
     position: absolute;
     top: 19px;
     right: 10px;
@@ -679,10 +751,12 @@ button.course-accordion-label.active {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     transform: rotateZ(-5deg) rotateX(3deg) perspective(20px) rotateY(6deg);
 }
-.courser-buy-column-register-button{
+
+.courser-buy-column-register-button {
     display: flex;
 }
-.button-register{
+
+.button-register {
     color: #ffffff;
     background-color: #181818;
     border-style: solid;
@@ -693,29 +767,316 @@ button.course-accordion-label.active {
     margin: 20px auto 0px auto;
     z-index: 5;
     border-radius: 2px;
-}  
+}
 
-  .separator{
+.separator {
     margin: 50px auto 20px auto;
-    display:flex;
+    display: flex;
     align-items: center;
     opacity: 0.5;
-  }
-  
-  .separator .line{
+}
+
+.separator .line {
     height: 2px;
     flex: 1;
     background-color: #DADADA;
-  }
-  
-  .separator img{
+}
+
+.separator img {
     width: auto;
     height: 25px;
-    padding:0 0.5rem;
-  }
+    padding: 0 0.5rem;
+}
+
 /* course buy section  css end here */
 
 
+
+
+/* ONLINE COURSES section css start here  */
+.online-courses-details {
+    transition: all .25s ease-in-out;
+}
+
+.online-courses-details:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.online-courses-details:hover .online-courses-add-to-cart {
+    opacity: 1;
+    bottom: 10px;
+}
+
+.online-courses-products {
+    margin-bottom: 20px;
+}
+
+.online-courses-details img {
+    width: 430px;
+    height: 430px;
+}
+
+.course-overlay {
+    z-index: -1;
+}
+
+.online-courses-details-info {
+    background-color: white;
+    padding: 15px 15px 25px 15px;
+    text-align: center
+}
+
+.online-courses-details-info h5 {
+    font-size: 1em;
+}
+
+.online-courses-details-info h6 span {
+    font-size: 1.1rem;
+    color: #C28832;
+}
+
+.online-courses-details-info h6 {
+    font-size: 0.9rem;
+}
+
+.online-courses-image {
+    position: relative;
+}
+
+.online-courses-add-to-cart {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+.online-courses-details:hover .online-courses-add-to-cart {
+    opacity: 1;
+    bottom: 10px;
+    text-align: center;
+    transition: all .3s ease;
+
+}
+
+.online-courses-add-to-cart a {
+    color: #ffffff !important;
+    background-color: #c28832;
+    font-size: clamp(.625rem, 1.5vw, .75rem);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: .05em;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    overflow: visible;
+    padding: clamp(0.75rem, 1.5vw, 1rem);
+    font-weight: 700;
+    left: auto;
+    border: 0;
+    border-radius: 2px;
+    white-space: nowrap;
+    display: inline-block;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    /* -webkit-transition: all .3s cubic-bezier(.19, 1, .22, 1); */
+    transition: all .3s cubic-bezier(.19, 1, .22, 1);
+}
+
+.online-courses-add-to-cart a:hover {
+    background-color: #dca152;
+    transform: translateY(-1px);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05), 0 2px 2px rgba(0, 0, 0, .05), 0 4px 4px rgba(0, 0, 0, .05), 0 8px 8px rgba(0, 0, 0, .05), 0 16px 16px rgba(0, 0, 0, .05);
+}
+
+.online-courses-add-to-cart:hover i::before {
+    margin-left: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.online-courses-add-to-cart i::before {
+    margin: -5px;
+    color: white;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.purchased-online-courses-button {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    border: none;
+}
+
+.purchased-online-courses-button button {
+    border: none;
+}
+
+.purchased-online-courses-button button a {
+    font-size: 1.2rem;
+    width: auto;
+    font-family: Modelica bold !important;
+    ;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    background-color: #c28832;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #c28832;
+    padding: 6px 18px 6px 18px !important;
+    border-radius: 3px !important;
+}
+
+.purchased-online-courses-button button a:hover {
+    background-color: #dca152;
+    border-color: #dca152;
+}
+
+.course-bottom-shape-divider {
+    transform: rotate(180deg);
+    bottom: -1px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+}
+
+.course-bottom-shape-divider svg {
+    height: 50px;
+    z-index: -1;
+    display: block;
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.course-bottom-shape-divider svg path {
+    fill: #fff;
+    transform-origin: center;
+    transform: rotateY(180deg);
+}
+
+/* ONLINE COURSES section css end here  */
+
+
+
+
+/* WAITING LIST form section start here  */
+.waiting-list-form-section {
+    position: relative;
+    margin-top: -190px;
+    margin-bottom: 90px;
+}
+
+.waiting-list-form-row {
+    width: 50%;
+}
+
+.waiting-list-form {
+    padding: 20px;
+    background-color: white;
+}
+
+.waiting-list-form-felid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 20px 0px 20px;
+}
+
+.form-felid-half {
+    padding-right: calc(15px/2);
+    padding-left: calc(15px/2);
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.form-felid-full {
+    padding-right: calc(15px/2);
+    padding-left: calc(15px/2);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#form-field-firstName,
+#form-field-lastName,
+#form-field-email {
+    width: 100%;
+}
+
+.waiting-list-form-felid input {
+    min-height: 47px;
+    padding: 6px 16px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.5em;
+    background-color: #ffffff;
+    border-color: #DBDBDB;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.submit-button-row {
+    background-color: #C28832 !important;
+    color: white !important;
+    min-height: 47px;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: var(--main-bg-color);
+    padding: 0px 25px 0px 25px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+
+}
+
+.submit-button-row input {
+    background-color: #C28832 !important;
+    border-color: #C28832 !important;
+    color: white !important;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+.submit-button-row:hover,
+.submit-button-row:hover input {
+    background-color: #dca152 !important;
+    border-color: #dca152 !important;
+    cursor: pointer;
+
+}
+
+.fa-play-circle {
+    cursor: pointer;
+}
+
+/* WAITING LIST form section start here  */
 /* mobile css start here  */
 @media only screen and (max-width: 768px) {
 
