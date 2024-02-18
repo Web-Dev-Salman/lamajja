@@ -284,7 +284,7 @@ h6 {
     padding: 20px;
     justify-content: center;
     align-items: center;
-    height: 442px;
+    height: auto;
     position: relative;
 }
 
@@ -315,8 +315,20 @@ h6 {
     border-radius: 50%;
     box-shadow: 0 2px 6px -2px #c7c7c7;
     background-color: transparent;
-    background-image: linear-gradient(140deg, #EBB96F00 0%, #DCA15200 100%);
     transform: rotate(0deg);
+}
+
+.icon-wrapper-step-1 {
+    background-image: linear-gradient(140deg, #EBB96F00 0%, #DCA15200 100%);
+}
+.icon-wrapper-step-2 {
+    background-image: linear-gradient(140deg, #EBB96F54 0%, #DCA15254 100%);
+}
+.icon-wrapper-step-3 {
+    background-image:linear-gradient(140deg, #EBB96FA8 0%, #DCA152A8 100%);
+}
+.icon-wrapper-step-4 {
+    background-image: linear-gradient(140deg, #ebb96f 0%, #dca152 100%);
 }
 
 .icon-wrapper img {
@@ -356,24 +368,24 @@ h6 {
 }
 
 .step-flow-content {
-    height: 120px;
+    max-height: 120px;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+}
+div.step-flow-content p {
     text-align: left;
 }
-
 .show-hide-item {
     text-align: left;
-
-
 }
 
 .show-hide-toggle {
     z-index: 2;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFFFFF 34%);
-
 }
 
 .toggle-open {
-    height: 120px;
+    height: 70px;
     color: var(--main-bg-color);
     position: relative;
     width: 100%;
@@ -505,6 +517,18 @@ h6 {
 
 }
 
+
+@keyframes slide-up {
+    10%, 33%{
+        transform: translateY(0%);
+    }
+    43%, 66%{
+        transform: translateY(100%);
+    }
+    76%, 100%{
+        transform: translateY(200%);
+    }
+}
 /*course-accordion*/
 
 .course-accordion-center-body {
@@ -566,9 +590,10 @@ h6 {
 
 .course-accordion-center .course-accordion-center-body .course-accordion-container .course-accordion-settings .course-accordion-setting .course-accordion-label.active:before {
     transform: rotate(90deg);
-    fill: #c28832;
+    width: 20px;
+    height: 20px;
     transition: transform ease-in-out 0.36s;
-    background-image: url("./img/arrow-down-sign-to-navigate.svg");
+    background-image: url("/img/arrow-down-sign-to-navigate.svg");
 }
 
 .course-accordion-center .course-accordion-center-body .course-accordion-container .course-accordion-settings .course-accordion-setting .button-container {
@@ -602,7 +627,11 @@ h6 {
 button.course-accordion-label.active {
     color: #d08e32;
 }
-
+.course-accordion-label{
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: Modelica Bold;
+}
 
 /* image accordion start  */
 
@@ -1151,7 +1180,7 @@ button.course-accordion-label.active {
         padding: 20px;
         justify-content: center;
         align-items: center;
-        height: 442px;
+        height: auto;
         position: relative;
     }
 

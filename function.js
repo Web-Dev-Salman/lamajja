@@ -1,79 +1,41 @@
-function hideShow() {
-    const findOut = document.getElementById('find-out');
-    const showLess = document.getElementById('show-less');
-    const stepFlowContent = document.getElementById('step-flow-content');
+function hideShow(elementId, findOutId, showLessId) {
+    const findOut = document.getElementById(findOutId);
+    const showLess = document.getElementById(showLessId);
+    const stepFlowContent = document.getElementById(elementId);
+
     if (findOut.style.display === "inline-block" && showLess.style.display === "none") {
         findOut.style.display = "none";
-        findOut.style.height = "120px";
-        stepFlowContent.style.height = "auto";
-        showLess.style.height = "auto";
         showLess.style.display = "inline-block";
-    }
-    else{
+        stepFlowContent.style.maxHeight = stepFlowContent.scrollHeight + "px";
+    } else {
         findOut.style.display = "inline-block";
-        findOut.style.height = "120px";
-        stepFlowContent.style.height = "120px";
-        showLess.style.height = "auto";
         showLess.style.display = "none";
+        stepFlowContent.style.maxHeight = "120px"; // Show at 120px height
+        setTimeout(function() {
+            stepFlowContent.style.maxHeight = "auto"; // Set height to auto after a delay
+        }, 1); // Minimal delay to ensure proper transition
     }
 }
-function hideShow2() {
-    const findOut2 = document.getElementById('find-out-2');
-    const showLess2 = document.getElementById('show-less-2');
-    const stepFlowContent2 = document.getElementById('step-flow-content-2');
-    if (findOut2.style.display === "inline-block" && showLess2.style.display === "none") {
-        findOut2.style.display = "none";
-        findOut2.style.height = "120px";
-        stepFlowContent2.style.height = "auto";
-        showLess2.style.height = "auto";
-        showLess2.style.display = "inline-block";
-    }
-    else{
-        findOut2.style.display = "inline-block";
-        findOut2.style.height = "120px";
-        stepFlowContent2.style.height = "120px";
-        showLess2.style.height = "auto";
-        showLess2.style.display = "none";
-    }
-}
-function hideShow3() {
-    const findOut3 = document.getElementById('find-out-3');
-    const showLess3 = document.getElementById('show-less-3');
-    const stepFlowContent3 = document.getElementById('step-flow-content-3');
-    if (findOut3.style.display === "inline-block" && showLess3.style.display === "none") {
-        findOut3.style.display = "none";
-        findOut3.style.height = "120px";
-        stepFlowContent3.style.height = "auto";
-        showLess3.style.height = "auto";
-        showLess3.style.display = "inline-block";
-    }
-    else{
-        findOut3.style.display = "inline-block";
-        findOut3.style.height = "120px";
-        stepFlowContent3.style.height = "120px";
-        showLess3.style.height = "auto";
-        showLess3.style.display = "none";
-    }
-}
-function hideShow4() {
-    const findOut4 = document.getElementById('find-out-4');
-    const showLess4 = document.getElementById('show-less-4');
-    const stepFlowContent4 = document.getElementById('step-flow-content-4');
-    if (findOut4.style.display === "inline-block" && showLess4.style.display === "none") {
-        findOut4.style.display = "none";
-        findOut4.style.height = "120px";
-        stepFlowContent4.style.height = "auto";
-        showLess4.style.height = "auto";
-        showLess4.style.display = "inline-block";
-    }
-    else{
-        findOut4.style.display = "inline-block";
-        findOut4.style.height = "120px";
-        stepFlowContent4.style.height = "120px";
-        showLess4.style.height = "auto";
-        showLess4.style.display = "none";
-    }
-}
+
+document.getElementById('show-hide-item').addEventListener('click', function() {
+    hideShow('step-flow-content', 'find-out', 'show-less');
+});
+
+document.getElementById('show-hide-item-2').addEventListener('click', function() {
+    hideShow('step-flow-content-2', 'find-out-2', 'show-less-2');
+});
+
+document.getElementById('show-hide-item-3').addEventListener('click', function() {
+    hideShow('step-flow-content-3', 'find-out-3', 'show-less-3');
+});
+
+document.getElementById('show-hide-item-4').addEventListener('click', function() {
+    hideShow('step-flow-content-4', 'find-out-4', 'show-less-4');
+});
+
+
+
+// accordion function here 
 const accordion = function () {
     const courseLabels = document.querySelectorAll(".course-accordion-label"),
         buttons = document.querySelectorAll(".button"),
@@ -86,7 +48,7 @@ const accordion = function () {
 
         // Toggle course-accordion-description opacity
         e.currentTarget.parentElement.nextElementSibling
-            .querySelector("p")
+            .querySelector("p, ul")
             .classList.toggle("active");
 
         // Toggle collapsible
@@ -119,4 +81,4 @@ const accordion = function () {
 accordion();
 
 
-  
+
